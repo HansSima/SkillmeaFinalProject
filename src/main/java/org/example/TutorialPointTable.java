@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TutorialPointTable {
@@ -16,13 +18,13 @@ public class TutorialPointTable {
 
     @BeforeEach
     public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
     }
 
     @AfterEach
     public void cleanUp() {
-        driver.close();
+        //driver.close();
         driver.quit();
     }
 
